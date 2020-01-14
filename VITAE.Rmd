@@ -1,0 +1,210 @@
+---
+name: Logan Stundal
+date: "`r format(Sys.time(), '%B, %Y')`"
+qualifications: PhD
+position: PhD Candidate
+address: Minneapolis, MN
+phone: 701 610 8586
+email: stund005@umn.edu
+www: loganstundal.com
+github: loganstundal
+# linkedin: loganstundal
+twitter: loganstundal
+headcolor: 414141
+output: vitae::awesomecv
+keep_tex: true
+header-includes:
+   - \usepackage{xcolor}
+   - \definecolor{fontColor}{HTML}{414141}
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(vitae)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Education
+```{r}
+umn <- tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates,
+  "PhD, Political Science", "University of Minnesota", "Minneapolis, MN", "2016 - Present",)
+
+umn.details <- c("Fields: International Relations and Political Methods",
+                 "Advisors: John Freeman, Tanisha Fazal")
+
+und <- tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates,
+  "BA, Political Science and Economics", "University of North Dakota", "Grand Forks, ND", "2013"
+)
+und.details <- c("Magna Cum Laude")
+
+
+
+detailed_entries(data = umn, what = degree, when = dates, 
+                 with = uni, where = loc, why = umn.details)
+detailed_entries(data = und, what = degree, when = dates, 
+                 with = uni, where = loc, why = und.details,.protect=F)
+
+```
+
+# Working Papers
+```{r}
+tribble(~title, ~coauthors,
+        "Event Data in Space: Statistical Models of Machine Coded Vs. Human Coded Data", 
+        "(with Benjamin Bagozzi, John Freeman, and Jennifer Holmes), Presented at PolMeth 2019",
+        "Rebel Predation and Foreign Aid", "Presented at MPSA 2019",
+        "Spatial Dependence and Overdispersion in Count Data", "Presented at Polmeth 2017") %>%
+  detailed_entries(why = coauthors,what = title)
+```
+
+<!-- # Select Other Publications and Writing -->
+# Non-academic writing
+```{r}
+tribble(~entry,~when,
+        "``Measles, Ukraine, and Civil War: The Missing Links'' (with Tanisha Fazal). \\it{Political Violence @ A Glance}", "March 22, 2019") %>%
+  detailed_entries(what = entry, 
+                   when = when,.protect=F)
+```
+
+# Awards, Grants, & Fellowships
+```{r}
+tribble(
+  ~name, ~year,
+  "Political Science, Teaching Assistant Fellowship", "2017-Present",
+  "Political Science, Summer Fellowship", "2017-Present",
+  "National Science Foundation, GRFP Honorable Mention", "2018",
+  "Graduate Pre-Dissertation Research Fellowship", "2017",
+  "Larson Graduate Research Fellowship in Political Economy", "2016-17",
+  "EITM Certification / Fellowship - ICPSR (NSF Funded)", "2017",
+  "PolMeth Travel Grant, Madison, WI (NSF Funded)", "2017",
+  "Ronald E. McNair Post-Baccalaureate Fellowship", "2009-13"
+  
+  ) %>%
+  brief_entries(what = name,
+                with = year)
+
+```
+
+# Teaching and Research Experience
+```{r}
+tribble(~what, ~why,
+        'Teaching Assistant',
+        c('POL 1025: Global Politics; POL 1026: Foreign Policy; POL 3085: Quantitative Analysis; POL 4810: The Politics of Nuclear Weapons')) %>%
+detailed_entries(what = what,
+                 why  = why)
+tribble(~what,'Course Instructor') %>%
+  detailed_entries(what = what,
+                   why  = c('POL 3085: Quantitative Analysis; Summer 2019'))
+tribble(~what,'Research Assistant') %>%
+  detailed_entries(what = what,
+                   why  = c('Ron Krebs - Fall 2019',
+                            'John Freeman - Continuous spatial models',
+                           'Jessica Stanton - Universal Jurisdiction and Civil War'))
+
+```
+
+# Conference & Workshop Participation
+Annual Meetings 
+```{r}
+tribble(~name,
+        "Polmeth: 2019, 2017",
+        "Midwest Political Science Association: 2019",
+        "Upper Midwest International Relations Conference (Minneapolis, MN): 2019",
+        "BIGCSS Summer School in Computational Social Science (Breman, Germany): July 2018",
+        "Upper Midwest International Relations Conference (Madison, WI): 2018") %>%
+  brief_entries(what = name)
+```
+
+# Service
+```{r}
+
+tribble(
+  ~name, ~year,
+  "Minnesota Graduate Student Methods Conference, Organizer", "2018-Present",
+  "Minnesota Political Methods Colloquium, Co-Chair", "2018-Present",
+  "McNair Program: Student Mentor","2017-Present",
+  "Graduate Student Life Committee, Co-Chair", "2018-19",
+  "TRIO Program - Upward Bound: Mentor", "2016"
+  ) %>%
+  brief_entries(what = name,
+                with = year)
+```
+
+
+# Affiliations
+```{r}
+tribble(~what,
+        "Midwest Political Science Association",
+        "International Studies Association") %>%
+  brief_entries(what = what)
+```
+
+# Relevant Skills
+## Research Interests
+```{r}
+tribble(~detail,
+        "\\textbf{International Relations}: Political violence/conflict processes, health crises, disease management",
+        "\\textbf{Methodology}: spatial models, diffusion and contagion processes, Bayesian analsysis, simulation"
+        ) %>%
+  brief_entries(detail,.protect = F)
+```
+
+## Data Analysis
+```{r}
+tribble(~detail,
+        "Spatial Econometrics, Mapping, Time Series, Bayesian Analysis, Visualisation, Data Cleaning, Forecasting, Surveys",
+        ) %>%
+  brief_entries(detail)
+```
+
+## Programming
+```{r}
+tribble(~detail,
+        "R, Python, SQL, Stan, TeX, ArcGIS"
+        ) %>%
+  brief_entries(detail)
+```
+
+# Awards & Achievements
+## Awards
+```{r}
+tribble(
+  ~ award, ~ year,
+  "UMN, Thank a Teacher Award", "2019, 2018",
+) %>%
+  brief_entries(what = award, 
+                with = year)
+```
+
+# References
+\begin{table}[!h]
+  \fontsize{10}{4}
+  \fontseries{b}
+  \selectfont
+  {\color{fontColor}\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} lll}
+    John Freeman                                & Tanisha Fazal                     & Jessica Stanton \\
+    Professor                                   & Associate Professor               & Associate Professor\\
+    Political Science Department                & Political Science Department      & Humphrey School of Public Affairs\\ 
+    University of Minnesota                     & University of Minnesota           & University of Minnesota \\
+    Email: \href{mailto:freeman@umn.edu}{freeman@umn.edu} &
+    Email: \href{mailto:fazal007@umn.edu}{fazal007@umn.edu} &
+    Email: \href{mailto:stantonj@umn.edu}{stantonj@umn.edu} \\
+    Phone: 612-624-6018                         & Phone: 612-624-8261 \             & 612-626-8910 \\
+    & & \\
+    & & \\
+    & & \\
+    Jane Sumner                                 & Mark Bell                         & Brian Urlacher \\
+    Assistant Professor                         & Assistant Professor               & Associate Professor \\ 
+    Political Science Department                & Political Science Department      & Political Science Department\\ 
+    University of Minnesota                     & University of Minnesota           & University of North Dakota \\
+    Email: \href{mailto:jlsumner@umn.edu}{jlsumner@umn.edu} &
+    Email: \href{mailto:msbell@umn.edu}{msbell@umn.edu} &
+    Email: \href{mailto:brian.urlacher@und.edu}{brian.urlacher@und.edu} \\
+    Phone: 612-626-7825                         & Phone: 612-626-2889               & Phone: 701-777-3541
+    
+    
+  \end{tabular*}}
+\end{table}
+
+
