@@ -16,6 +16,13 @@ keep_tex: true
 header-includes:
    - \usepackage{xcolor}
    - \definecolor{fontColor}{HTML}{414141}
+knit: (function(inputFile, encoding) { 
+    rmarkdown::render(inputFile, 
+                      encoding    = encoding, 
+                      output_file = file.path(dirname(inputFile),
+                                              'Versions',
+                                              paste0('VITAE_',format(lubridate::today(), "%Y%m%d")))) 
+                      })
 ---
 
 ```{r setup, include=FALSE}
