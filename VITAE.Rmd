@@ -16,13 +16,13 @@ keep_tex: true
 header-includes:
    - \usepackage{xcolor}
    - \definecolor{fontColor}{HTML}{414141}
-knit: (function(inputFile, encoding) { 
-    rmarkdown::render(inputFile, 
-                      encoding    = encoding, 
-                      output_file = file.path(dirname(inputFile),
-                                              'Versions',
-                                              paste0('VITAE_',format(lubridate::today(), "%Y%m%d")))) 
-                      })
+# knit: (function(inputFile, encoding) { 
+#     rmarkdown::render(inputFile, 
+#                       encoding    = encoding, 
+#                       output_file = file.path(dirname(inputFile),
+#                                               'Versions',
+#                                               paste0('VITAE_',format(lubridate::today(), "%Y%m%d")))) 
+#                       })
 ---
 
 ```{r setup, include=FALSE}
@@ -30,6 +30,7 @@ library(tidyverse)
 library(vitae)
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
 
 # Education
 ```{r}
@@ -55,17 +56,21 @@ detailed_entries(data = und, what = degree, when = dates,
 
 ```
 
+
+# Dissertation
+Placeholder
+
+
 # Working Papers
 ```{r}
 tribble(~title, ~coauthors,
         "Event Data in Space: Statistical Models of Machine Coded Vs. Human Coded Data", 
         "(with Benjamin Bagozzi, John Freeman, and Jennifer Holmes), Presented at PolMeth 2019",
-        "Rebel Predation and Foreign Aid", "Presented at MPSA 2019",
-        "Spatial Dependence and Overdispersion in Count Data", "Presented at Polmeth 2017") %>%
+        "Rebel Predation and Foreign Aid", "Presented at MPSA 2019") %>%
   detailed_entries(why = coauthors,what = title)
 ```
 
-<!-- # Select Other Publications and Writing -->
+
 # Non-academic writing
 ```{r}
 tribble(~entry,~when,
@@ -73,6 +78,7 @@ tribble(~entry,~when,
   detailed_entries(what = entry, 
                    when = when,.protect=F)
 ```
+
 
 # Awards, Grants, & Fellowships
 ```{r}
@@ -93,35 +99,50 @@ tribble(
 
 ```
 
+
 # Teaching and Research Experience
 ```{r}
 tribble(~what, ~why,
         'Teaching Assistant',
         c('POL 1025: Global Politics; POL 1026: Foreign Policy; POL 3085: Quantitative Analysis; POL 4810: The Politics of Nuclear Weapons')) %>%
-detailed_entries(what = what,
-                 why  = why)
+  detailed_entries(what = what,
+                   why  = why)
+
 tribble(~what,'Course Instructor') %>%
   detailed_entries(what = what,
                    why  = c('POL 3085: Quantitative Analysis; Summer 2019'))
+
 tribble(~what,'Research Assistant') %>%
   detailed_entries(what = what,
-                   why  = c('Ron Krebs - Fall 2019',
-                            'John Freeman - Continuous spatial models',
-                           'Jessica Stanton - Universal Jurisdiction and Civil War'))
+                   why  = c('John Freeman: Summer 2018 - present',
+                            'Ron Krebs: Fall 2019',
+                            'Jessica Stanton: Summer 2018'))
 
 ```
+
+\pagebreak
+
 
 # Conference & Workshop Participation
 Annual Meetings 
 ```{r}
-tribble(~name,
-        "Polmeth: 2019, 2017",
-        "Midwest Political Science Association: 2019",
-        "Upper Midwest International Relations Conference (Minneapolis, MN): 2019",
-        "BIGCSS Summer School in Computational Social Science (Breman, Germany): July 2018",
-        "Upper Midwest International Relations Conference (Madison, WI): 2018") %>%
-  brief_entries(what = name)
+tribble(~name, ~year,
+        "Polmeth", "2019, 2017",
+        "Midwest Political Science Association", "2020,2019",
+        "Upper Midwest International Relations Conference", "2019, 2018") %>%
+  brief_entries(what = name,
+                with = year)
 ```
+
+Workshops
+```{r}
+tribble(~name, ~year,
+        "BIGCSS Summer School in Computational Social Science (Breman, Germany)", "Summer 2018",
+        "ICPSR, University of Michigan, Ann Arbor", "Summer 2017") %>%
+  brief_entries(what = name,
+                with = year)
+```
+
 
 # Service
 ```{r}
@@ -142,39 +163,41 @@ tribble(
 # Affiliations
 ```{r}
 tribble(~what,
+        "Society for Political Methodology",
         "Midwest Political Science Association",
         "International Studies Association") %>%
   brief_entries(what = what)
 ```
 
+
 # Relevant Skills
-## Research Interests
+Research Interests
 ```{r}
 tribble(~detail,
-        "\\textbf{International Relations}: Political violence/conflict processes, health crises, disease management",
+        "\\textbf{International Relations}: Disease outbreaks, civil wars, political violence/conflict processes, humanitarian crises",
         "\\textbf{Methodology}: spatial models, diffusion and contagion processes, Bayesian analsysis, simulation"
         ) %>%
   brief_entries(detail,.protect = F)
 ```
 
-## Data Analysis
+Data Analysis
 ```{r}
 tribble(~detail,
-        "Spatial Econometrics, Mapping, Time Series, Bayesian Analysis, Visualisation, Data Cleaning, Forecasting, Surveys",
+        "Spatial Econometrics, Mapping, Time Series, Bayesian Analysis, Visualisation, Data Cleaning, Surveys",
         ) %>%
   brief_entries(detail)
 ```
 
-## Programming
+Programming
 ```{r}
 tribble(~detail,
-        "R, Python, SQL, Stan, TeX, ArcGIS"
+        "R, Python, SQL, Stan, LaTeX, Git"
         ) %>%
   brief_entries(detail)
 ```
 
 # Awards & Achievements
-## Awards
+Awards
 ```{r}
 tribble(
   ~ award, ~ year,
@@ -187,7 +210,6 @@ tribble(
 # References
 \begin{table}[!h]
   \fontsize{10}{4}
-  \fontseries{b}
   \selectfont
   {\color{fontColor}\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} lll}
     John Freeman                                & Tanisha Fazal                     & Jessica Stanton \\
@@ -202,7 +224,7 @@ tribble(
     & & \\
     & & \\
     Jane Sumner                                 & Mark Bell                         & Brian Urlacher \\
-    Assistant Professor                         & Assistant Professor               & Associate Professor \\ 
+    Assistant Professor                         & Assistant Professor               & Professor \\ 
     Political Science Department                & Political Science Department      & Political Science Department\\ 
     University of Minnesota                     & University of Minnesota           & University of North Dakota \\
     Email: \href{mailto:jlsumner@umn.edu}{jlsumner@umn.edu} &
