@@ -23,10 +23,12 @@ setwd('c:/users/logan/googledrive/umn/research/vitae')
 
 
 # SAVE ------------------------------------------------------------------------
+
+# Knit the pdf
 rmarkdown::render(input       = 'VITAE.Rmd',
                   output_file = 'VITAE.pdf')
 
-
+# Save a copy with today's date to the 'Versions' folder
 file.copy(from = 'VITAE.pdf',
           to   = file.path(dirname('VITAE.Rmd'),
                            'Versions',
@@ -34,3 +36,8 @@ file.copy(from = 'VITAE.pdf',
           overwrite = TRUE)
 
 
+# Save a copy to website directory folder for immediate upload
+file.copy(from = 'VITAE.pdf',
+          to   = '')
+
+# paste0('VITAE_',format(lubridate::today(), "%Y%m%d"),'.pdf')

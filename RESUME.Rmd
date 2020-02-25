@@ -31,7 +31,7 @@ library(vitae)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-
+\vspace{0.5in}
 # Education
 ```{r}
 umn <- tribble(
@@ -39,7 +39,7 @@ umn <- tribble(
   "PhD, Political Science", "University of Minnesota", "Minneapolis, MN", "2016 - Present",)
 
 umn.details <- c("Fields: International Relations and Political Methods",
-                 "Advisors: John Freeman, Tanisha Fazal")
+                 "Advisors: Tanisha Fazal, John Freeman")
 
 und <- tribble(
   ~ degree, ~ uni, ~ loc, ~ dates,
@@ -67,10 +67,37 @@ tribble(~title, ~abstract,
 ```
 
 
+# Relevant Skills
+## Data Analysis
+```{r}
+tribble(~detail,
+        "Spatial Econometrics, Mapping, Time Series, Bayesian Analysis, Visualisation, Data Cleaning, Surveys",
+        ) %>%
+  brief_entries(detail)
+```
+
+## Programming
+```{r}
+tribble(~detail,
+        "R, Python, SQL, Stan, LaTeX, Git, Javascript"
+        ) %>%
+  brief_entries(detail)
+```
+
+## Research Interests
+```{r}
+tribble(~detail,
+        "\\textbf{International Relations}: Disease outbreaks, civil wars, conflict dynamics, conflict data validation",
+        "\\textbf{Methodology}: spatial models, diffusion and contagion processes, Bayesian analsysis, simulation, event data"
+        ) %>%
+  brief_entries(detail,.protect = F)
+```
+
+
 # Working Papers
 ```{r}
 tribble(~title, ~coauthors,
-        "Event Data in Space: Spatial Models of Machine Coded Vs. Human Coded Data", 
+        "Event Data in Space: Spatial Models of Machine Coded Vs. Human Coded Conflict Data", 
         "(with Benjamin Bagozzi, John Freeman, and Jennifer Holmes), Presented at PolMeth 2019",
         "Rebel Predation and Foreign Aid", "Presented at MPSA 2019") %>%
   detailed_entries(why = coauthors,what = title)
@@ -86,6 +113,7 @@ tribble(~entry,~when,
 ```
 
 
+\newpage
 # Awards, Grants, & Fellowships
 ```{r}
 tribble(
@@ -108,15 +136,15 @@ tribble(
 
 # Teaching and Research Experience
 ```{r}
+tribble(~what,'Primary Instructor') %>%
+  detailed_entries(what = what,
+                   why  = c('POL 3085: Quantitative Analysis'))
+
 tribble(~what, ~why,
         'Teaching Assistant',
         c('POL 1025: Global Politics; POL 1026: Foreign Policy; POL 3085: Quantitative Analysis; POL 4810: The Politics of Nuclear Weapons')) %>%
   detailed_entries(what = what,
                    why  = why)
-
-tribble(~what,'Course Instructor') %>%
-  detailed_entries(what = what,
-                   why  = c('POL 3085: Quantitative Analysis; Summer 2019'))
 
 tribble(~what,'Research Assistant') %>%
   detailed_entries(what = what,
@@ -125,6 +153,7 @@ tribble(~what,'Research Assistant') %>%
                             'Jessica Stanton: Summer 2018'))
 
 ```
+
 
 # Conference & Workshop Participation
 Annual Meetings 
@@ -172,32 +201,6 @@ tribble(~what,
   brief_entries(what = what)
 ```
 
-
-# Relevant Skills
-Research Interests
-```{r}
-tribble(~detail,
-        "\\textbf{International Relations}: Disease outbreaks, civil wars, political violence/conflict processes, humanitarian crises",
-        "\\textbf{Methodology}: spatial models, diffusion and contagion processes, Bayesian analsysis, simulation"
-        ) %>%
-  brief_entries(detail,.protect = F)
-```
-
-Data Analysis
-```{r}
-tribble(~detail,
-        "Spatial Econometrics, Mapping, Time Series, Bayesian Analysis, Visualisation, Data Cleaning, Surveys",
-        ) %>%
-  brief_entries(detail)
-```
-
-Programming
-```{r}
-tribble(~detail,
-        "R, Python, SQL, Stan, LaTeX, Git, Javascript"
-        ) %>%
-  brief_entries(detail)
-```
 
 # Awards & Achievements
 Awards
