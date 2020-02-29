@@ -159,9 +159,9 @@ tribble(~what,'Research Assistant') %>%
 Annual Meetings 
 ```{r}
 tribble(~name, ~year,
-        "Polmeth", "2019, 2017",
-        "Midwest Political Science Association", "2020,2019",
-        "Upper Midwest International Relations Conference", "2019, 2018") %>%
+        "Polmeth", "2017, 2019",
+        "Midwest Political Science Association", "2019,2020",
+        "Upper Midwest International Relations Conference", "2018, 2019, 2020") %>%
   brief_entries(what = name,
                 with = year)
 ```
@@ -213,35 +213,35 @@ tribble(
                 with = year)
 ```
 
-\pagebreak
+<!-- \pagebreak -->
 
-# References
-\begin{table}[!h]
-  \fontsize{10}{4}
-  \selectfont
-  {\color{fontColor}\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} lll}
-    John Freeman                                & Tanisha Fazal                     & Jessica Stanton \\
-    Professor                                   & Associate Professor               & Associate Professor\\
-    Political Science Department                & Political Science Department      & Humphrey School of Public Affairs\\ 
-    University of Minnesota                     & University of Minnesota           & University of Minnesota \\
-    Email: \href{mailto:freeman@umn.edu}{freeman@umn.edu} &
-    Email: \href{mailto:fazal007@umn.edu}{fazal007@umn.edu} &
-    Email: \href{mailto:stantonj@umn.edu}{stantonj@umn.edu} \\
-    Phone: 612-624-6018                         & Phone: 612-624-8261 \             & 612-626-8910 \\
-    & & \\
-    & & \\
-    & & \\
-    Jane Sumner                                 & Mark Bell                         & Brian Urlacher \\
-    Assistant Professor                         & Assistant Professor               & Professor \\ 
-    Political Science Department                & Political Science Department      & Political Science Department\\ 
-    University of Minnesota                     & University of Minnesota           & University of North Dakota \\
-    Email: \href{mailto:jlsumner@umn.edu}{jlsumner@umn.edu} &
-    Email: \href{mailto:msbell@umn.edu}{msbell@umn.edu} &
-    Email: \href{mailto:brian.urlacher@und.edu}{brian.urlacher@und.edu} \\
-    Phone: 612-626-7825                         & Phone: 612-626-2889               & Phone: 701-777-3541
-    
-    
-  \end{tabular*}}
-\end{table}
+<!-- # References -->
+<!-- \begin{table}[!h] -->
+<!--   \fontsize{10}{4} -->
+<!--   \selectfont -->
+<!--   {\color{fontColor}\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} lll} -->
+<!--     John Freeman                                & Tanisha Fazal                     & Jessica Stanton \\ -->
+<!--     Professor                                   & Associate Professor               & Associate Professor\\ -->
+<!--     Political Science Department                & Political Science Department      & Humphrey School of Public Affairs\\ -->
+<!--     University of Minnesota                     & University of Minnesota           & University of Minnesota \\ -->
+<!--     Email: \href{mailto:freeman@umn.edu}{freeman@umn.edu} & -->
+<!--     Email: \href{mailto:fazal007@umn.edu}{fazal007@umn.edu} & -->
+<!--     Email: \href{mailto:stantonj@umn.edu}{stantonj@umn.edu} \\ -->
+<!--     Phone: 612-624-6018                         & Phone: 612-624-8261 \             & 612-626-8910 \\ -->
+<!--     & & \\ -->
+<!--     & & \\ -->
+<!--     & & \\ -->
+<!--     Jane Sumner                                 & Mark Bell                         & Brian Urlacher \\ -->
+<!--     Assistant Professor                         & Assistant Professor               & Professor \\ -->
+<!--     Political Science Department                & Political Science Department      & Political Science Department\\ -->
+<!--     University of Minnesota                     & University of Minnesota           & University of North Dakota \\ -->
+<!--     Email: \href{mailto:jlsumner@umn.edu}{jlsumner@umn.edu} & -->
+<!--     Email: \href{mailto:msbell@umn.edu}{msbell@umn.edu} & -->
+<!--     Email: \href{mailto:brian.urlacher@und.edu}{brian.urlacher@und.edu} \\ -->
+<!--     Phone: 612-626-7825                         & Phone: 612-626-2889               & Phone: 701-777-3541 -->
+
+
+<!--   \end{tabular*}} -->
+<!-- \end{table} -->
 
 
