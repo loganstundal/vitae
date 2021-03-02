@@ -2,3 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
+fonts/
+Old-Versions/
+References/
+Docs/
+Vita_knit.R
+RESUME.pdf
+RESUME.Rmd

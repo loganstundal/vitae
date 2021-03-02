@@ -39,7 +39,7 @@ umn <- tribble(
   "PhD, Political Science", "University of Minnesota", "Minneapolis, MN", "2016 - Present",)
 
 umn.details <- c("Fields: International Relations and Political Methods",
-                 "Advisors: John Freeman, Tanisha Fazal")
+                 "Advisors: Tanisha Fazal and John Freeman")
 
 und <- tribble(
   ~ degree, ~ uni, ~ loc, ~ dates,
@@ -98,7 +98,6 @@ tribble(
   "EITM Certification / Fellowship - ICPSR (NSF Funded)", "2017",
   "PolMeth Travel Grant, Madison, WI (NSF Funded)", "2017",
   "Ronald E. McNair Post-Baccalaureate Fellowship", "2009-13"
-  
   ) %>%
   brief_entries(what = name,
                 with = year)
@@ -110,7 +109,11 @@ tribble(
 ```{r}
 tribble(~what, ~why,
         'Teaching Assistant',
-        c('POL 1025: Global Politics; POL 1026: Foreign Policy; POL 3085: Quantitative Analysis; POL 4810: The Politics of Nuclear Weapons')) %>%
+        c('POL 1025: Global Politics; POL 1026: Foreign Policy; POL 3085: Quantitative Analysis; POL 4810: The Politics of Nuclear Weapons; POL 4991: Capstone'),
+        'Graduate Student Instructor', 
+        c("ICPSR 2020, Empirical Modeling with Robert Franzese"),
+        "Guest Lecture",
+        c("ICPSR Workshop - 2020: Spatial Econometrics with Robert Franzese")) %>%
   detailed_entries(what = what,
                    why  = why)
 
@@ -120,7 +123,8 @@ tribble(~what,'Course Instructor') %>%
 
 tribble(~what,'Research Assistant') %>%
   detailed_entries(what = what,
-                   why  = c('John Freeman: Summer 2018 - present',
+                   why  = c('Tanisha Fazal: Spring 2021 - present',
+                            'John Freeman: Summer 2018 - present',
                             'Ron Krebs: Fall 2019',
                             'Jessica Stanton: Summer 2018'))
 
@@ -130,6 +134,7 @@ tribble(~what,'Research Assistant') %>%
 Annual Meetings 
 ```{r}
 tribble(~name, ~year,
+        "ISA", "2021",
         "Polmeth", "2019, 2017",
         "Midwest Political Science Association", "2020,2019",
         "Upper Midwest International Relations Conference", "2019, 2018") %>%

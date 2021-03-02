@@ -1,5 +1,0 @@
-.gitignore
-.Rproj.user/
-CV -- OLD
-awesome-cv.cls
-fonts/

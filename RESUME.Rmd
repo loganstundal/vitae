@@ -99,6 +99,8 @@ tribble(~detail,
 tribble(~title, ~coauthors,
         "Event Data in Space: Spatial Models of Machine Coded Vs. Human Coded Conflict Data", 
         "(with Benjamin Bagozzi, John Freeman, and Jennifer Holmes), Presented at PolMeth 2019",
+        "Media Sentiment and Chinese Foreign Policy: Classifying Reporting with Convolutional Neural Nets",
+        "(with Matt Eichinger)",
         "Rebel Predation and Foreign Aid", "Presented at MPSA 2019") %>%
   detailed_entries(why = coauthors,what = title)
 ```
