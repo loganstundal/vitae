@@ -145,6 +145,7 @@ tribble(~name, ~year,
 Workshops
 ```{r}
 tribble(~name, ~year,
+        "Mapping US and Chinese Health Diplomacy", "2021",
         "BIGCSS Summer School in Computational Social Science (Breman, Germany)", "Summer 2018",
         "ICPSR, University of Michigan, Ann Arbor", "Summer 2017") %>%
   brief_entries(what = name,
