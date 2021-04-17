@@ -25,21 +25,26 @@ header-includes:
 #                       })
 ---
 
+<!---------------------------------------------------------------------------->
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(vitae)
 knitr::opts_chunk$set(echo = FALSE)
 ```
+<!---------------------------------------------------------------------------->
 
 
+
+<!---------------------------------------------------------------------------->
 # Education
+<!---------------------------------------------------------------------------->
 ```{r}
 umn <- tribble(
   ~ degree, ~ uni, ~ loc, ~ dates,
   "PhD, Political Science", "University of Minnesota", "Minneapolis, MN", "2016 - Present",)
 
 umn.details <- c("Fields: International Relations and Political Methods",
-                 "Advisors: Tanisha Fazal and John Freeman")
+                 "Advisor: Tanisha Fazal; Committee: John Freeman, Mark Bell, Jessica Stanton")
 
 und <- tribble(
   ~ degree, ~ uni, ~ loc, ~ dates,
@@ -55,8 +60,11 @@ detailed_entries(data = und, what = degree, when = dates,
                  with = uni, where = loc, why = und.details,.protect=F)
 
 ```
+<!---------------------------------------------------------------------------->
 
 
+
+<!---------------------------------------------------------------------------->
 # Dissertation
 ```{r}
 tribble(~title, ~abstract,
@@ -65,28 +73,55 @@ tribble(~title, ~abstract,
   detailed_entries(what = title,
                    why  = abstract)
 ```
+<!---------------------------------------------------------------------------->
 
 
-# Working Papers
+
+<!---------------------------------------------------------------------------->
+# Publications
+<!---------------------------------------------------------------------------->
+\vspace{3mm}
+Under review
+\vspace{-3mm}
 ```{r}
-tribble(~title, ~coauthors,
-        "Event Data in Space: Spatial Models of Machine Coded Vs. Human Coded Data", 
-        "(with Benjamin Bagozzi, John Freeman, and Jennifer Holmes), Presented at PolMeth 2019",
-        "Rebel Predation and Foreign Aid", "Presented at MPSA 2019") %>%
-  detailed_entries(why = coauthors,what = title)
+tribble(~title, ~coauthors, ~year,
+        "Event Data in Space: Spatial Models of Machine Coded Vs. Human Coded Data", "(with Benjamin Bagozzi, John Freeman, and Jennifer Holmes)", "2021") %>%
+  detailed_entries(what = title,
+                   when = year,
+                   why  = coauthors)
 ```
 
-
-# Non-academic writing
+\vspace{3mm}
+Working papers
+\vspace{-3mm}
 ```{r}
-tribble(~entry,~when,
-        "``Measles, Ukraine, and Civil War: The Missing Links'' (with Tanisha Fazal). \\it{Political Violence @ A Glance}", "March 22, 2019") %>%
-  detailed_entries(what = entry, 
-                   when = when,.protect=F)
+tribble(~title, ~coauthors, ~conference,
+        "Computationally Efficient Spatial and Spatiotemporal models estimated with Non-linear Least Squares", NA, "Polmeth 2021",
+        "Mapping US and Chinese Health Diplomacy", "(with Tanisha Fazal)", "ISA 2021; APSA 2021",
+        "Disease and War: Why conflict context matters and how it shapes disease outcomes", NA, "ISA 2021",
+        "Rebel Predation and Foreign Aid", NA, "MPSA 2019") %>%
+  detailed_entries(what = title,
+                   why  = coauthors,
+                   when = conference)
 ```
 
+\vspace{3mm}
+Non-academic writing
+\vspace{-3mm}
+```{r}
+tribble(~title, ~when,
+        "``Measles, Ukraine, and Civil War: The Missing Links'' (with Tanisha Fazal). \\it{Political Violence @ A Glance}", "March 2019") %>%
+  detailed_entries(what = title, 
+                   when = when,
+                   .protect = F)
+```
+<!---------------------------------------------------------------------------->
 
+
+
+<!---------------------------------------------------------------------------->
 # Awards, Grants, & Fellowships
+<!---------------------------------------------------------------------------->
 ```{r}
 tribble(
   ~name, ~year,
@@ -103,41 +138,57 @@ tribble(
                 with = year)
 
 ```
+<!---------------------------------------------------------------------------->
 
 
+\pagebreak
+
+<!---------------------------------------------------------------------------->
 # Teaching and Research Experience
+<!---------------------------------------------------------------------------->
 ```{r}
-tribble(~what, ~why,
+tribble(~what, ~description, ~when,
         'Teaching Assistant',
-        c('POL 1025: Global Politics; POL 1026: Foreign Policy; POL 3085: Quantitative Analysis; POL 4810: The Politics of Nuclear Weapons; POL 4991: Capstone'),
-        'Graduate Student Instructor', 
-        c("ICPSR 2020, Empirical Modeling with Robert Franzese"),
-        "Guest Lecture",
-        c("ICPSR Workshop - 2020: Spatial Econometrics with Robert Franzese")) %>%
+        c('POL 1025: Global Politics; POL 1026: Foreign Policy; POL 3085: Quantitative Analysis; POL 4810: The Politics of Nuclear Weapons; POL 4991: Capstone'), NA,
+        
+        'ICPSR Graduate Student Instructor', "(Empirical Modeling with Robert Franzese)", "2020-present",
+        
+        "ICPSR Workshop, Guest Lecturer","(Spatial Econometrics with Robert Franzese)", "2020",
+        
+        "Course Instructor", "POL 3085: Quantitative Analisys", "Summer 2019") %>%
   detailed_entries(what = what,
-                   why  = why)
-
-tribble(~what,'Course Instructor') %>%
-  detailed_entries(what = what,
-                   why  = c('POL 3085: Quantitative Analysis; Summer 2019'))
-
-tribble(~what,'Research Assistant') %>%
-  detailed_entries(what = what,
-                   why  = c('Tanisha Fazal: Spring 2021 - present',
-                            'John Freeman: Summer 2018 - present',
-                            'Ron Krebs: Fall 2019',
-                            'Jessica Stanton: Summer 2018'))
-
+                   why  = description,
+                   when = when)
 ```
 
+Research Assistantships
+```{r}
+tribble(
+  ~what, ~year,
+  "Tanisha Fazal", "2021 - present",
+  "John Freeman", "2018 - present",
+  "Ron Krebs", "Fall 2019",
+  "Jessica Stanton", "Summer 2018"
+  ) %>%
+  brief_entries(what = what,
+                with = year)
+
+```
+<!---------------------------------------------------------------------------->
+
+
+
+<!---------------------------------------------------------------------------->
 # Conference & Workshop Participation
+<!---------------------------------------------------------------------------->
 Annual Meetings 
 ```{r}
 tribble(~name, ~year,
+        "APSA", "2021",
+        "Polmeth", "2017, 2019, 2021",
         "ISA", "2021",
-        "Polmeth", "2019, 2017",
-        "Midwest Political Science Association", "2020,2019",
-        "Upper Midwest International Relations Conference", "2019, 2018") %>%
+        "Midwest Political Science Association", "2019, 2020",
+        "Upper Midwest International Relations Conference", "2018, 2019") %>%
   brief_entries(what = name,
                 with = year)
 ```
@@ -151,15 +202,19 @@ tribble(~name, ~year,
   brief_entries(what = name,
                 with = year)
 ```
+<!---------------------------------------------------------------------------->
 
 
+
+<!---------------------------------------------------------------------------->
 # Service
+<!---------------------------------------------------------------------------->
 ```{r}
 
 tribble(
   ~name, ~year,
-  "Minnesota Graduate Student Methods Conference, Organizer", "2018-Present",
   "Minnesota Political Methods Colloquium, Co-Chair", "2018-Present",
+  "Minnesota Graduate Student Methods Conference, Organizer", "2018-2020",
   "McNair Program: Student Mentor","2017-Present",
   "Graduate Student Life Committee, Co-Chair", "2018-19",
   "TRIO Program - Upward Bound: Mentor", "2016"
@@ -167,19 +222,28 @@ tribble(
   brief_entries(what = name,
                 with = year)
 ```
+<!---------------------------------------------------------------------------->
 
 
+
+<!---------------------------------------------------------------------------->
 # Affiliations
+<!---------------------------------------------------------------------------->
 ```{r}
 tribble(~what,
+        "American Political Science Association",
         "Society for Political Methodology",
         "Midwest Political Science Association",
         "International Studies Association") %>%
   brief_entries(what = what)
 ```
+<!---------------------------------------------------------------------------->
 
+\pagebreak
 
-# Relevant Skills
+<!---------------------------------------------------------------------------->
+# Skills
+<!---------------------------------------------------------------------------->
 Research Interests
 ```{r}
 tribble(~detail,
@@ -204,47 +268,83 @@ tribble(~detail,
         ) %>%
   brief_entries(detail)
 ```
+<!---------------------------------------------------------------------------->
 
+
+
+<!---------------------------------------------------------------------------->
 # Awards & Achievements
+<!---------------------------------------------------------------------------->
 Awards
 ```{r}
 tribble(
   ~ award, ~ year,
-  "UMN, Thank a Teacher Award", "2019, 2018",
+  "UMN, Thank a Teacher Award", "2018, 2019",
 ) %>%
   brief_entries(what = award, 
                 with = year)
 ```
+<!---------------------------------------------------------------------------->
+
+
 
 \pagebreak
 
-# References
-\begin{table}[!h]
-  \fontsize{10}{4}
-  \selectfont
-  {\color{fontColor}\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} lll}
-    John Freeman                                & Tanisha Fazal                     & Jessica Stanton \\
-    Professor                                   & Associate Professor               & Associate Professor\\
-    Political Science Department                & Political Science Department      & Humphrey School of Public Affairs\\ 
-    University of Minnesota                     & University of Minnesota           & University of Minnesota \\
-    Email: \href{mailto:freeman@umn.edu}{freeman@umn.edu} &
-    Email: \href{mailto:fazal007@umn.edu}{fazal007@umn.edu} &
-    Email: \href{mailto:stantonj@umn.edu}{stantonj@umn.edu} \\
-    Phone: 612-624-6018                         & Phone: 612-624-8261 \             & 612-626-8910 \\
-    & & \\
-    & & \\
-    & & \\
-    Jane Sumner                                 & Mark Bell                         & Brian Urlacher \\
-    Assistant Professor                         & Assistant Professor               & Professor \\ 
-    Political Science Department                & Political Science Department      & Political Science Department\\ 
-    University of Minnesota                     & University of Minnesota           & University of North Dakota \\
-    Email: \href{mailto:jlsumner@umn.edu}{jlsumner@umn.edu} &
-    Email: \href{mailto:msbell@umn.edu}{msbell@umn.edu} &
-    Email: \href{mailto:brian.urlacher@und.edu}{brian.urlacher@und.edu} \\
-    Phone: 612-626-7825                         & Phone: 612-626-2889               & Phone: 701-777-3541
-    
-    
-  \end{tabular*}}
-\end{table}
 
+
+<!---------------------------------------------------------------------------->
+# References
+<!---------------------------------------------------------------------------->
+```{r}
+
+tribble(~what, ~rank, ~why,
+        "Tanisha Fazal", "Professor", list("Political Science Department", "University of Minnesota", "Email: \\href{mailto:fazal007@umn.edu}{fazal007@umn.edu}", "Phone: 612-624-8261"),
+        
+       "John Freeman", "Professor", list("Political Science Department", "University of Minnesota", "Email: \\href{mailto:freeman@umn.edu}{freeman@umn.edu}", "Phone: 612-624-6018"),
+       
+       "Jessica Stanton", "Associate Professor", list("Political Science Department", "Temple University", "Email: \\href{mailto:jessica.stanton@temple.edu}{jessica.stanton@temple.edu}"),
+       
+       "Mark Bell", "Assistant Professor", list("Political Science Department", "University of Minnesota", "Email: \\href{mailto:msbell@umn.edu}{msbell@umn.edu}", "Phone: 612-624-4144"),
+       
+       "Robert Franzese", "Professor", list("Political Science Department", "University of Michigan", "Email: \\href{mailto:franzese@umich.edu}{franzese@umich.edu}")
+       ) %>% 
+  detailed_entries(what = what,
+                   when = rank,
+                   why  = why,
+                   .protect = FALSE)
+
+```
+
+
+  <!-- \vspace{3in} -->
+  
+  
+  <!-- \begin{table}[!h] -->
+  <!--   \fontsize{10}{4} -->
+  <!--   \selectfont -->
+  <!--   {\color{fontColor}\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} lll} -->
+  <!--     John Freeman                                & Tanisha Fazal                     & Jessica Stanton \\ -->
+  <!--     Professor                                   & Associate Professor               & Associate Professor\\ -->
+  <!--     Political Science Department                & Political Science Department      & Humphrey School of Public Affairs\\  -->
+  <!--     University of Minnesota                     & University of Minnesota           & University of Minnesota \\ -->
+  <!--     Email: \href{mailto:freeman@umn.edu}{freeman@umn.edu} & -->
+  <!--     Email: \href{mailto:fazal007@umn.edu}{fazal007@umn.edu} & -->
+  <!--     Email: \href{mailto:stantonj@umn.edu}{stantonj@umn.edu} \\ -->
+  <!--     Phone: 612-624-6018                         & Phone: 612-624-8261 \             & 612-626-8910 \\ -->
+  <!--     & & \\ -->
+  <!--     & & \\ -->
+  <!--     & & \\ -->
+  <!--     Jane Sumner                                 & Mark Bell                         & Brian Urlacher \\ -->
+  <!--     Assistant Professor                         & Assistant Professor               & Professor \\  -->
+  <!--     Political Science Department                & Political Science Department      & Political Science Department\\  -->
+  <!--     University of Minnesota                     & University of Minnesota           & University of North Dakota \\ -->
+  <!--     Email: \href{mailto:jlsumner@umn.edu}{jlsumner@umn.edu} & -->
+  <!--     Email: \href{mailto:msbell@umn.edu}{msbell@umn.edu} & -->
+  <!--     Email: \href{mailto:brian.urlacher@und.edu}{brian.urlacher@und.edu} \\ -->
+  <!--     Phone: 612-626-7825                         & Phone: 612-626-2889               & Phone: 701-777-3541 -->
+  
+  
+  <!--   \end{tabular*}} -->
+  <!-- \end{table} -->
+<!---------------------------------------------------------------------------->
 
