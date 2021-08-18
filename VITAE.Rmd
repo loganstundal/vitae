@@ -81,7 +81,7 @@ tribble(~title, ~abstract,
 # Publications
 <!---------------------------------------------------------------------------->
 \vspace{3mm}
-Under review
+Forthcoming  
 \vspace{-3mm}
 ```{r}
 tribble(~title, ~coauthors, ~year,
@@ -93,7 +93,7 @@ tribble(~title, ~coauthors, ~year,
 ```
 
 \vspace{3mm}
-Working papers and Presentations
+Working papers
 \vspace{-3mm}
 ```{r}
 tribble(~title, ~coauthors, ~conference,
