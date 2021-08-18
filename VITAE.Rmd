@@ -8,7 +8,7 @@ phone: 701 610 8586
 email: stund005@umn.edu
 www: loganstundal.com
 github: loganstundal
-# linkedin: loganstundal
+linkedin: logan-stundal
 twitter: loganstundal
 headcolor: 414141
 output: vitae::awesomecv
@@ -85,18 +85,20 @@ Under review
 \vspace{-3mm}
 ```{r}
 tribble(~title, ~coauthors, ~year,
-        "Event Data in Space: Spatial Models of Machine Coded Vs. Human Coded Data", "(with Benjamin Bagozzi, John Freeman, and Jennifer Holmes)", "2021") %>%
+        "Human Rights Violations in Space: Assessing the External Validity of Machine Geo-coded Vs. Human Geo-coded Data. Accepted by \\it{Political Analysis}", "(with Benjamin Bagozzi, John Freeman, and Jennifer Holmes)", "2021") %>%
   detailed_entries(what = title,
                    when = year,
-                   why  = coauthors)
+                   why  = coauthors,
+                   .protect = FALSE)
 ```
 
 \vspace{3mm}
-Working papers
+Working papers and Presentations
 \vspace{-3mm}
 ```{r}
 tribble(~title, ~coauthors, ~conference,
-        "Computationally Efficient Spatial and Spatiotemporal models estimated with Non-linear Least Squares", NA, "Polmeth 2021",
+        "Computationally Efficient Spatial and Spatiotemporal models estimated with Non-linear Least Squares", NA, NA,
+        "Pluralism in Time Series Analysis", NA, "APSA 2021",
         "Mapping US and Chinese Health Diplomacy", "(with Tanisha Fazal)", "ISA 2021; APSA 2021",
         "Disease and War: Why conflict context matters and how it shapes disease outcomes", NA, "ISA 2021",
         "Rebel Predation and Foreign Aid", NA, "MPSA 2019") %>%
@@ -151,9 +153,9 @@ tribble(~what, ~description, ~when,
         'Teaching Assistant',
         c('POL 1025: Global Politics; POL 1026: Foreign Policy; POL 3085: Quantitative Analysis; POL 4810: The Politics of Nuclear Weapons; POL 4991: Capstone'), NA,
         
-        'ICPSR Graduate Student Instructor', "(Empirical Modeling with Robert Franzese)", "2020-present",
+        'ICPSR Graduate Student Instructor', "(Empirical Modeling with Robert Franzese)", "2020, 2021",
         
-        "ICPSR Workshop, Guest Lecturer","(Spatial Econometrics with Robert Franzese)", "2020",
+        "ICPSR Workshop, Guest Lecturer","(Spatial Econometrics with Robert Franzese)", "2020, 2021",
         
         "Course Instructor", "POL 3085: Quantitative Analisys", "Summer 2019") %>%
   detailed_entries(what = what,
@@ -304,7 +306,7 @@ tribble(~what, ~rank, ~why,
        
        "Jessica Stanton", "Associate Professor", list("Political Science Department", "Temple University", "Email: \\href{mailto:jessica.stanton@temple.edu}{jessica.stanton@temple.edu}"),
        
-       "Mark Bell", "Assistant Professor", list("Political Science Department", "University of Minnesota", "Email: \\href{mailto:msbell@umn.edu}{msbell@umn.edu}", "Phone: 612-624-4144"),
+       "Mark Bell", "Associate Professor", list("Political Science Department", "University of Minnesota", "Email: \\href{mailto:msbell@umn.edu}{msbell@umn.edu}", "Phone: 612-624-4144"),
        
        "Robert Franzese", "Professor", list("Political Science Department", "University of Michigan", "Email: \\href{mailto:franzese@umich.edu}{franzese@umich.edu}")
        ) %>% 
