@@ -44,7 +44,7 @@ umn <- tribble(
   "PhD, Political Science", "University of Minnesota", "Minneapolis, MN", "2016 - Present",)
 
 umn.details <- c("Fields: International Relations and Political Methods",
-                 "Advisor: Tanisha Fazal; Committee: John Freeman, Mark Bell, Jessica Stanton")
+                 "Dissertation Committee: Tanisha Fazal (Chair), John Freeman, Mark Bell, Jessica Stanton")
 
 und <- tribble(
   ~ degree, ~ uni, ~ loc, ~ dates,
@@ -97,10 +97,11 @@ Working papers
 \vspace{-3mm}
 ```{r}
 tribble(~title, ~coauthors, ~conference,
-        "Computationally Efficient Spatial and Spatiotemporal models estimated with Non-linear Least Squares", NA, NA,
-        "Pluralism in Time Series Analysis", NA, "APSA 2021",
-        "Mapping US and Chinese Health Diplomacy", "(with Tanisha Fazal)", "ISA 2021; APSA 2021",
         "Disease and War: Why conflict context matters and how it shapes disease outcomes", NA, "ISA 2021",
+        "Mapping US and Chinese Health Diplomacy", "(with Tanisha Fazal)", "ISA 2021; APSA 2021",
+        "Geostatistical Analysis in Space and Time", "(with John Freeman and Benjamin Bagozzi)", "APSA 2021",
+        "Computationally Efficient Spatial and Spatiotemporal models estimated with Non-linear Least Squares", NA, NA,
+        "Heterogeneous Spatial and Spatiotemporal Dynamic Models", NA, NA,
         "Rebel Predation and Foreign Aid", NA, "MPSA 2019") %>%
   detailed_entries(what = title,
                    why  = coauthors,
@@ -157,7 +158,7 @@ tribble(~what, ~description, ~when,
         
         "ICPSR Workshop, Guest Lecturer","(Spatial Econometrics with Robert Franzese)", "2020, 2021",
         
-        "Course Instructor", "POL 3085: Quantitative Analisys", "Summer 2019") %>%
+        "Instructor of Record", "POL 3085: Quantitative Analisys", "Summer 2019") %>%
   detailed_entries(what = what,
                    why  = description,
                    when = when)
@@ -187,9 +188,9 @@ Annual Meetings
 ```{r}
 tribble(~name, ~year,
         "APSA", "2021",
-        "Polmeth", "2017, 2019, 2021",
+        "Polmeth", "2017, 2019",
         "ISA", "2021",
-        "Midwest Political Science Association", "2019, 2020",
+        "Midwest Political Science Association", "2019",
         "Upper Midwest International Relations Conference", "2018, 2019") %>%
   brief_entries(what = name,
                 with = year)
@@ -215,9 +216,9 @@ tribble(~name, ~year,
 
 tribble(
   ~name, ~year,
-  "Minnesota Political Methods Colloquium, Co-Chair", "2018-Present",
+  "Minnesota Political Methods Colloquium, Co-Chair", "2018-2021",
+  "McNair Program: Student Mentor","2017-2021",
   "Minnesota Graduate Student Methods Conference, Organizer", "2018-2020",
-  "McNair Program: Student Mentor","2017-Present",
   "Graduate Student Life Committee, Co-Chair", "2018-19",
   "TRIO Program - Upward Bound: Mentor", "2016"
   ) %>%
