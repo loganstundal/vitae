@@ -36,5 +36,5 @@ file.copy(from = "stundal-cv.pdf",
 
 # Save a copy to website directory folder for immediate upload
 file.copy(from = "stundal-cv.pdf",
-          to   = "C:/Users/logan/GoogleDrive/UMN/RESEARCH/website/static/media/stundal-cv.pdf",
+          to   = "C:/Users/logan/Old-GoogleDrive/UMN/RESEARCH/website/static/media/stundal-cv.pdf",
           overwrite = TRUE)

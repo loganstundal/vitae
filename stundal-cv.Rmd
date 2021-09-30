@@ -68,8 +68,11 @@ detailed_entries(data = und, what = degree, when = dates,
 # Dissertation
 ```{r}
 tribble(~title, ~abstract,
-        "The Epidemiology of Civil Wars", 
-        "My dissertation explores the causal relationship between the dynamics of civil war and the outbreak of disease within these environments. It examines how certain classes of conflict produce differential civilian strategic responses which yield different disease outbreak outcomes. Cross-national and sub-national dynamic spatial models demonstrate theoretical generalizability while detailed case analysis of the Syrian civil war illuminates causal mechanisms.") %>%
+        "Epidemiology and War: Disease, Conflict, and Public Health", 
+        "My dissertation explores the connection between civil war and armed conflict on the emergence of disease within or in close proximity to active combat zones. While we have known for quite some time that war leads to disease, our understanding of what types of violence contribute to greater (or lower) incidence of specific disease types has remained limited. I test the causal connections between disease and war using a varied levels of analysis approach that leverages small-n interviews to establish causal mechanisms, spatial-temporal dynamic models of subnational conflict processes to demonstrate these mechanisms, and cross-national quantitative analysis to explore the international consequences of conflict on public health. My dissertation reveals the complex connection between disease and the politics of violence in armed conflicts." 
+        
+        
+        ) %>%
   detailed_entries(what = title,
                    why  = abstract)
 ```
@@ -120,7 +123,7 @@ tribble(~title, ~when,
 ```
 <!---------------------------------------------------------------------------->
 
-
+\pagebreak
 
 <!---------------------------------------------------------------------------->
 # Awards, Grants, & Fellowships
@@ -130,10 +133,10 @@ tribble(
   ~name, ~year,
   "Political Science, Teaching Assistant Fellowship", "2017-Present",
   "Political Science, Summer Fellowship", "2017-Present",
-  "National Science Foundation, GRFP Honorable Mention", "2018",
+  "National Science Foundation (NSF), Graduate Research Fellowhip Program Honorable Mention", "2018",
   "Graduate Pre-Dissertation Research Fellowship", "2017",
   "Larson Graduate Research Fellowship in Political Economy", "2016-17",
-  "EITM Certification / Fellowship - ICPSR (NSF Funded)", "2017",
+  "Empirical Implications of Theoretical Models - Certification / Fellowship, Inter-university Consortium for Political and Social Research (ICPSR) (NSF Funded)", "2017",
   "PolMeth Travel Grant, Madison, WI (NSF Funded)", "2017",
   "Ronald E. McNair Post-Baccalaureate Fellowship", "2009-13"
   ) %>%
@@ -143,8 +146,6 @@ tribble(
 ```
 <!---------------------------------------------------------------------------->
 
-
-\pagebreak
 
 <!---------------------------------------------------------------------------->
 # Teaching and Research Experience
@@ -227,7 +228,7 @@ tribble(
 ```
 <!---------------------------------------------------------------------------->
 
-
+\pagebreak
 
 <!---------------------------------------------------------------------------->
 # Affiliations
@@ -242,7 +243,6 @@ tribble(~what,
 ```
 <!---------------------------------------------------------------------------->
 
-\pagebreak
 
 <!---------------------------------------------------------------------------->
 # Skills
@@ -274,7 +274,6 @@ tribble(~detail,
 <!---------------------------------------------------------------------------->
 
 
-
 <!---------------------------------------------------------------------------->
 # Awards & Achievements
 <!---------------------------------------------------------------------------->
@@ -282,7 +281,8 @@ Awards
 ```{r}
 tribble(
   ~ award, ~ year,
-  "UMN, Thank a Teacher Award", "2018, 2019",
+  "UMN, Thank a Teacher Award", "2019",
+  "UMN, Thank a Teacher Award", "2018",
 ) %>%
   brief_entries(what = award, 
                 with = year)
