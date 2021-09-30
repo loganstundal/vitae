@@ -41,7 +41,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r}
 umn <- tribble(
   ~ degree, ~ uni, ~ loc, ~ dates,
-  "PhD, Political Science", "University of Minnesota", "Minneapolis, MN", "2016 - Present",)
+  "PhD, Political Science", "University of Minnesota", "Minneapolis, MN", "Degree Expected: May 2022",)
 
 umn.details <- c("Fields: International Relations and Political Methods",
                  "Dissertation Committee: Tanisha Fazal (Chair), John Freeman, Mark Bell, Jessica Stanton")
