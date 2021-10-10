@@ -1,0 +1,184 @@
+---
+name: Logan
+surname: Stundal
+position: "PhD Candidate"
+address: "University of Minnesota, Department of Political Science"
+phone: "701.610.8586"
+www: loganstundal.com
+email: "logan.stundal@gmail.com"
+twitter: loganstundal
+github: loganstundal
+linkedin: logan-stundal
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::awesomecv
+headcolor: 414141
+docname: Resume
+page_total: FALSE # Not sure why this does not work...
+header-includes:
+  - \usepackage{tabularx}
+---
+<!---------------------------------------------------------------------------->
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+
+application <- "The Presidential Management Fellowship"
+```
+<!---------------------------------------------------------------------------->
+
+
+
+<!---------------------------------------------------------------------------->
+# Summary
+<!---------------------------------------------------------------------------->
+
+PhD candidate with 5+ years experience presenting research to diverse audiences and summarizing findings in written reports, project management and budgeting background, and familiarity with a variety of research methods. Eager to put my data analysis, research, and management skills to use in US Federal government work advancing program, agency, and US strategic interests. Published work on event-data validation, well-received teaching reviews (Average Score: 5.7/6.0), and multiple collaborative team-based research projects.
+
+  * ***Expected PhD completion***: May/June 2022
+
+<!---------------------------------------------------------------------------->
+
+
+
+<!---------------------------------------------------------------------------->
+# Education
+<!---------------------------------------------------------------------------->
+```{r education}
+tribble(~ Degree, ~ Year, ~ Institution, ~ Where,
+        "PhD, Political Science", 
+            "Expected: May/June 2022", 
+            "University of Minnesota", 
+            "Minneapolis, MN",
+        "MA, Political Science", 
+            "2021", 
+            "University of Minnesota",
+            "Minneapolis, MN",
+        "BA, Political Science & Economcis (Magna Cum Laude)", 
+            "2013", 
+            "University of North Dakota", 
+            "Grand Forks, ND") %>% 
+  detailed_entries(what  = Degree,
+                   when  = Year, 
+                   with  = Institution, 
+                   where = Where)
+```
+<!---------------------------------------------------------------------------->
+
+
+
+<!---------------------------------------------------------------------------->
+# Skills
+<!---------------------------------------------------------------------------->
+```{r skills}
+tribble(~type, ~detail,
+        
+        "General",
+        "Public speaking, written communication (memo and reports), project management and planning, program budgeting, grant application, data analysis, data cleaning and organization, collaborative reasearch and team-based project work",
+        
+        "Programming",
+        list("\\textbf{Expert:} R (especially Tidyverse, ggplot, and sf spatial libraries), GIS, MS Office (Word, PowerPoint, Excel)",
+             "\\textbf{Proficient:} Python, SQL, Stan, LaTex, Git, Javascript, Google Earth Engine environment"),
+        
+        "Data Analysis",
+        "Dynamic modeling (spatial and time series), geostatistical analysis, panel data methods, Bayesian analysis, data visualization and mapping, data cleaning, surveys",
+        
+        "Research",
+        list("\\textbf{Substantive}: Armed conflict, conflict event-data validation, health in conflict zones, international affairs, US foreign policy",
+             "\\textbf{Research Methods}: Research design, diffusion and contagion processes, simulation techniques")) %>%
+  detailed_entries(what = type,
+                   why  = detail, 
+                   .protect = FALSE)
+```
+<!---------------------------------------------------------------------------->
+
+
+
+<!---------------------------------------------------------------------------->
+# Experience
+<!---------------------------------------------------------------------------->
+```{r experience}
+tribble(~location, ~position, ~duties, ~when,
+        "University of Minnesota",
+            "PhD Candidate",
+            list("Wrote a dissertation exploring the causal connections between armed conflict and disease using mixed-methods including interviews (planned spring 2022) and large-n subnational spatial analysis", 
+                 "Presented research to non-technical audiences at various colloquia and national / international conferences",
+                 "Completed Institutional Review Board (IRB) protocol and trainings required for research with victimized populations",
+                 "Submitted grant applications with project-specific budgets to support ongoing research",
+                 "Extensively documented research and coding decisions through \\emph{Git} and \\emph{Github}"), 
+            "2016 - Present",
+        "",
+            "Research Assistant",
+            list("Served in multiple research assitant roles: coding international legal standards, cleaning and analyzing international survey data, and collecting evidence of Chinese military activity in the domain of public health",
+                 "Maintained reproducible workflows setting up research working directories to secure data and results",
+                 "Prepared and presented summary reports of research efforts in weekly or bi-weekly status update meetings"),
+            "2017 - Present",
+        "", 
+            "Teaching Assistant", 
+            list("Organized and graded student assignments while observing strict confidentiality requirements",
+                 "Managed and maintained student-facing class websites posting updates and required documents",
+                 "Provided detailed feedback to students on written work (example: policy memos)",
+                 "Scheduled student meetings and resolved disputes"), 
+            "2017-2021",
+        "",   
+            "Project Manager - Methods Conference Organizer", 
+            list("Planned large conferences of 30\\texttt{+} nationally representative graduate students for 2 consecutive years",
+                 "Drafted budget request and grant application documents outlining program goals and itemized funding needs",
+                 "Secured funding of approximately \\$10,000 from various college units and grant-funding organizations to cover conference expenses",
+                 "Prepared and presented itemized budgetary expense reports to grant-funding agencies",
+                 "Managed logistics for conference presenter lodging and food for all (approximately 100) conference attendees"), 
+            "2018-2020",
+        "",   
+            "Instructor of Record", 
+            list("Provided instruction in \\textit{US Foreign Policy} and \\textit{Undergraduate Research Methods}",
+                 "\\textbf{US Foreign Policy}: Lectured on topics including US counterterrorism policy, novel strategic challenges, and current (circa Fall 2018) US foreign policy posturing",
+                 "\\textbf{Research Methods}: Trained students in descriptive data analysis through multiple linear regression, fielded \\textit{Qualtrics} surveys with student-written questions, and instructed students in \\emph{R} programming language",
+                 "Managed classrooms with 70-150 students",
+                 "Maintained confidential student records"), 
+            "2018, 2019",
+        "University of Michigan",
+            "Graduate Teaching Instructor - Advanced Empirical Modeling (ICPSR Graduate Seminar)", 
+            list("Taught \\emph{R} code and advanced statistical modeling to graduate students and new professors",
+                 "Optimized lectures for asynchronous attendance from participants globally",
+                 "Offered research consultation in office hours"), 
+            "2020, 2021",
+        "Other",
+            "Private Consulting",
+            list("Provided multi-week (3-hour) training sessions to local businesses on uses and applications of the \\emph{R} programming language",
+                 "Soliticited feedback from business contacts to better understand their specific needs prior to trainings",
+                 "Wrote and presented code-examples demonstrating how attendees could integrate reproducable analysis into existing organizational workflows"),
+            "2019") %>%
+  detailed_entries(with  = location,
+                   what  = position, 
+                   why   = duties,
+                   when  = when,
+                   .protect = FALSE)
+```
+<!---------------------------------------------------------------------------->
+
+
+
+<!---------------------------------------------------------------------------->
+# Select Awards, Grants, & Fellowships
+<!---------------------------------------------------------------------------->
+```{r awards}
+tribble(
+  ~name, ~year,
+  "University of Minnesota - Thank a Teacher Award", "2019",
+  "National Science Foundation (NSF), Graduate Research Fellowhip Program Honorable Mention", "2018",
+  "Empirical Implications of Theoretical Models - Certification / Fellowship, Inter-university Consortium for Political and Social Research (ICPSR) (NSF Funded)", "2017",
+  "Larson Graduate Research Fellowship in Political Economy", "2016",
+  "Ronald E. McNair Post-Baccalaureate Fellowship", "2009") %>%
+  brief_entries(name, year)
+```
+<!---------------------------------------------------------------------------->
+
+
+
+<!---------------------------------------------------------------------------->
+# Publications, Select Working Papers, and Public Writing
+<!---------------------------------------------------------------------------->
+```{r publications}
+bibliography_entries("my_cites.bib")
+```
+<!---------------------------------------------------------------------------->

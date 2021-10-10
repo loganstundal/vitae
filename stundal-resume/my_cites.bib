@@ -1,0 +1,50 @@
+% ----------------------------------- %
+% Solution for "forthcomming" articles
+% https://jblevins.org/log/forthcoming
+% Can then use somethign like the following in 
+% the "year" option of article class:
+% "\noop{3001}in press"
+
+% https://tex.stackexchange.com/questions/31384/how-to-enter-publications-in-press-or-submitted-to-in-bibtex
+% Observe that I recommend using fake years -- such as 3001, 3002, and so on -- to make clear to all readers of the .bib file (including yourself!) that these aren't real publication dates but are being used solely for the purpose of ensuring a correct sorting order.
+% ----------------------------------- %
+
+@Preamble{ " \newcommand{\noop}[1]{} " }
+
+% ----------------------------------- %
+
+@phdthesis{stundal-dissertation,
+  author       = {Logan Stundal}, 
+  title        = {Working Title: Epidemiology and War: Disease, Conflict, and Public Health},
+  school       = {University of Minnesota},
+  year         = {2022}
+}
+
+@article{stundal-pa-2021,
+  title  = {Human Rights Violations in Space: Assessing the External Validity of Machine Geo-coded Vs. human Geo-coded Data},
+  author = {Stundal, Logan and Bagozzi, Benjamin and Freeman, John and Holmes, Jennifer},
+  journal= {Political Analysis},
+  year   = {\noop{3001} Forthcomming}
+}
+
+@unpublished{stundal-fazal,
+  author = {Fazal, Tanisha and Stundal, Logan},
+  title  = {Mapping US and Chinese Health Diplomacy},
+  year   = {2021}
+}
+
+@unpublished{stundal-iraq,
+  author = {Stundal, Logan and Bagozzi, Benjamin and Freeman, John},
+  title  = {Geostatistical Analysis in Space and Time: An Examination of Insurgent Activity During the Iraq War},
+  year   = {2021}
+}
+
+@misc{stundal-pvag-2019,
+  author  = {Fazal, Tanisha and Stundal, Logan},
+  title   = {"Measles, Ukraine, and Civil War: The Missing Links"},
+  month   = {July 22},
+  year    = {2019},
+  howpublished = {Political Violence at a Glance},
+  url     = {https://politicalviolenceataglance.org/2019/07/22/measles-ukraine-and-civil-war-the-missing-links/}
+}
+

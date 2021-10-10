@@ -1,0 +1,71 @@
+---
+name: Logan Stundal
+date: "`r format(Sys.time(), '%B, %Y')`"
+qualifications: PhD
+position: PhD Candidate
+address: Minneapolis, MN
+phone: 701 610 8586
+email: stund005@umn.edu
+www: loganstundal.com
+github: loganstundal
+linkedin: logan-stundal
+twitter: loganstundal
+headcolor: 414141
+output: vitae::awesomecv
+keep_tex: true
+header-includes:
+   - \usepackage{xcolor}
+   - \definecolor{fontColor}{HTML}{414141}
+---
+
+
+<!---------------------------------------------------------------------------->
+```{r setup, include=FALSE}
+library(tidyverse)
+library(vitae)
+knitr::opts_chunk$set(echo = FALSE)
+```
+<!---------------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------->
+# References
+<!---------------------------------------------------------------------------->
+```{r}
+
+tribble(~what, ~rank, ~why,
+      "Tanisha Fazal", "Professor", list("Political Science Department",
+                                         "University of Minnesota",
+                                         "Interfolio - Confidential Letter Email: \\href{mailto:send.Fazal.EF5F400216@interfolio.com}{send.Fazal.EF5F400216@interfolio.com}",
+                                         "Email: \\href{mailto:fazal007@umn.edu}{fazal007@umn.edu}", 
+                                         "Phone: 612-624-8261"),
+
+      "John Freeman", "Professor", list("Political Science Department", 
+                                        "University of Minnesota", 
+                                        "Interfolio - Confidential Letter Email: \\href{mailto:send.Freeman.D4A9D45E9F@interfolio.com}{send.Freeman.D4A9D45E9F@interfolio.com}",
+                                        "Email: \\href{mailto:freeman@umn.edu}{freeman@umn.edu}", 
+                                        "Phone: 612-624-6018"),
+
+      "Mark Bell", "Associate Professor", list("Political Science Department", 
+                                               "University of Minnesota", 
+                                               "Interfolio - Confidential Letter Email: \\href{mailto:send.Bell.6C0E4A9135@interfolio.com}{send.Bell.6C0E4A9135@interfolio.com}",
+                                               "Email: \\href{mailto:msbell@umn.edu}{msbell@umn.edu}", 
+                                               "Phone: 612-624-4144"),
+
+      "Robert Franzese", "Professor", list("Political Science Department", 
+                                           "University of Michigan", 
+                                           "Interfolio - Confidential Letter Email: \\href{mailto:send.Franzese.DEC0B8B2FB@interfolio.com}{send.Franzese.DEC0B8B2FB@interfolio.com}",
+                                           "Email: \\href{mailto:franzese@umich.edu}{franzese@umich.edu}",
+                                           "Phone:  734-764-6313"),
+      
+      "Jessica Stanton", "Associate Professor", list("Political Science Department", 
+                                                     "Temple University", 
+                                                     "Email: \\href{mailto:jessica.stanton@temple.edu}{jessica.stanton@temple.edu}",
+                                                     "Phone: 215-204-7796")
+) %>%
+detailed_entries(what = what,
+                 when = rank,
+                 why  = why,
+                 .protect = FALSE)
+
+```
+<!---------------------------------------------------------------------------->
