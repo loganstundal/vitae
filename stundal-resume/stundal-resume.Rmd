@@ -33,7 +33,7 @@ application <- "The Presidential Management Fellowship"
 # Summary
 <!---------------------------------------------------------------------------->
 
-PhD candidate with 5+ years experience presenting research to diverse audiences and summarizing findings in written reports, project management and budgeting background, and familiarity with a variety of research methods. Eager to put my data analysis, research, and management skills to use in US Federal government work advancing program, agency, and US strategic interests. Published work on event-data validation, well-received teaching reviews (Average Score: 5.7/6.0), and multiple collaborative team-based research projects.
+PhD candidate with 5+ years experience presenting research to diverse audiences and summarizing findings in written formats, project management and budgeting experience, and familiarity with a variety of research methods. Eager to put my data analysis, research, and management skills to use in US Federal government work advancing program, agency, and US strategic interests. Published work on event-data validation, well-received teaching reviews (Average Score: 5.7/6.0), and multiple collaborative team-based research projects.
 
   * ***Expected PhD completion***: May/June 2022
 
@@ -101,7 +101,7 @@ tribble(~type, ~detail,
 tribble(~location, ~position, ~duties, ~when,
         "University of Minnesota",
             "PhD Candidate",
-            list("Wrote a dissertation exploring the causal connections between armed conflict and disease using mixed-methods including interviews (planned spring 2022) and large-n subnational spatial analysis", 
+            list("Dissertation explores the causal connections between armed conflict and disease using mixed-methods including interviews (planned spring 2022) and large-n subnational spatiotemporal analysis", 
                  "Presented research to non-technical audiences at various colloquia and national / international conferences",
                  "Completed Institutional Review Board (IRB) protocol and trainings required for research with victimized populations",
                  "Submitted grant applications with project-specific budgets to support ongoing research",
